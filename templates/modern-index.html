@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koushal Vichare - Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Enhanced Modern CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/enhanced-modern-portfolio.css') }}">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">KV</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center;">
+                <div class="toggle-switch">
+                    <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
+                    <label for="theme-toggle" class="toggle-label"></label>
+                </div>
+                <!-- <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-subtitle" data-typewriter="Hello, I'm" data-speed="100">Hello, I'm</p>
+                <h1 class="hero-title">Koushal Vichare</h1>
+                <p class="hero-description">
+                    CEO & Founder | AI/ML Engineer | Full-Stack Developer passionate about creating innovative solutions that drive business growth and technological advancement.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="{{ url_for('static', filename='assets/koushal1.jpeg') }}" 
+                         alt="Koushal Vichare - Profile Picture" 
+                         class="hero-profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">
+                    Passionate entrepreneur and tech innovator with expertise in AI/ML, blockchain, and scalable solutions
+                </p>
+            </div>
+            
+            <div class="about-content animate-on-scroll">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='assets/matchboxoff.jpg') }}" 
+                         alt="Koushal Vichare - About Picture" 
+                         class="about-profile-image">
+                </div>
+                <div class="about-text">
+                    <h3>Building the Future with Technology</h3>
+                    <p>
+                        As a CEO and Co-Founder with over 3 years of experience, I've led multiple ventures generating over INR 2 crore in revenue. Currently pursuing Computer Science Engineering at Lovely Professional University with a CGPA of 7.6, I combine academic excellence with real-world entrepreneurial success.
+                    </p>
+                    <p>
+                        From managing 30+ team members and 300+ freelancers to achieving 600% ROI for clients, I bring proven leadership and technical expertise. My journey from a diploma graduate (79.60%) to a tech entrepreneur showcases my commitment to continuous learning and innovation.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number">₹2+ Cr</div>
+                            <div class="stat-label">Revenue Generated</div>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number">600%</div>
+                            <div class="stat-label">Max ROI Achieved</div>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number">330+</div>
+                            <div class="stat-label">Team Members Led</div>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <div class="stat-number">30%</div>
+                            <div class="stat-label">Monthly Growth Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">
+                    Comprehensive technical skills across multiple domains with hands-on experience and certifications
+                </p>
+            </div>
+            
+            <div class="skills-categories">
+                <div class="skill-category animate-on-scroll">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-flip-grid">
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-python"></i></div>
+                                    <div class="skill-name">Python</div>
+                                    <div class="skill-level">Expert Level</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Python Development</h4>
+                                        <p>5+ years of experience in Python development for AI/ML, web development, and automation.</p>
+                                        <ul>
+                                            <li>Machine Learning with TensorFlow/PyTorch</li>
+                                            <li>Web development with Flask/Django</li>
+                                            <li>Data analysis with Pandas/NumPy</li>
+                                            <li>API development and automation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-js-square"></i></div>
+                                    <div class="skill-name">JavaScript</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>JavaScript Development</h4>
+                                        <p>Full-stack JavaScript development with modern frameworks and libraries.</p>
+                                        <ul>
+                                            <li>ES6+ modern JavaScript features</li>
+                                            <li>React.js and Vue.js development</li>
+                                            <li>Node.js backend development</li>
+                                            <li>TypeScript for large applications</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-java"></i></div>
+                                    <div class="skill-name">Java</div>
+                                    <div class="skill-level">Intermediate</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Java Development</h4>
+                                        <p>Object-oriented programming and enterprise application development.</p>
+                                        <ul>
+                                            <li>Core Java and OOP concepts</li>
+                                            <li>Spring Boot applications</li>
+                                            <li>Data structures and algorithms</li>
+                                            <li>Maven and Gradle build tools</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-coins"></i></div>
+                                    <div class="skill-name">Solidity</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Blockchain Development</h4>
+                                        <p>Smart contract development and blockchain applications.</p>
+                                        <ul>
+                                            <li>ERC-20 and ERC-721 token standards</li>
+                                            <li>DeFi protocol development</li>
+                                            <li>Gas optimization techniques</li>
+                                            <li>Security best practices</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3>AI/ML & Data Science</h3>
+                    <div class="skills-flip-grid">
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-brain"></i></div>
+                                    <div class="skill-name">Machine Learning</div>
+                                    <div class="skill-level">Expert Level</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>ML Engineering</h4>
+                                        <p>Stanford certified ML engineer with real-world project experience.</p>
+                                        <ul>
+                                            <li>Supervised/Unsupervised learning</li>
+                                            <li>Neural networks and deep learning</li>
+                                            <li>Model deployment and optimization</li>
+                                            <li>MLOps and production pipelines</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-robot"></i></div>
+                                    <div class="skill-name">LLM Fine-tuning</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Large Language Models</h4>
+                                        <p>Professional experience with Outlier AI in LLM optimization.</p>
+                                        <ul>
+                                            <li>GPT model fine-tuning</li>
+                                            <li>Hugging Face Transformers</li>
+                                            <li>Prompt engineering</li>
+                                            <li>Model evaluation and testing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-chart-line"></i></div>
+                                    <div class="skill-name">Data Analytics</div>
+                                    <div class="skill-level">Expert Level</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Data Science & Analytics</h4>
+                                        <p>Professional experience in marketing analytics and business intelligence.</p>
+                                        <ul>
+                                            <li>Tableau and data visualization</li>
+                                            <li>Statistical analysis with R</li>
+                                            <li>Campaign ROI optimization</li>
+                                            <li>Predictive modeling</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-fire"></i></div>
+                                    <div class="skill-name">PyTorch</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Deep Learning Framework</h4>
+                                        <p>Neural network development and research-oriented projects.</p>
+                                        <ul>
+                                            <li>Custom neural architectures</li>
+                                            <li>Computer vision models</li>
+                                            <li>Natural language processing</li>
+                                            <li>Research and experimentation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3>Web Development</h3>
+                    <div class="skills-flip-grid">
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-react"></i></div>
+                                    <div class="skill-name">React.js</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>React Development</h4>
+                                        <p>Modern React development with hooks and state management.</p>
+                                        <ul>
+                                            <li>React Hooks and Context API</li>
+                                            <li>Redux for state management</li>
+                                            <li>Next.js for SSR applications</li>
+                                            <li>Component testing with Jest</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-node-js"></i></div>
+                                    <div class="skill-name">Node.js</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Backend Development</h4>
+                                        <p>Scalable server-side applications and API development.</p>
+                                        <ul>
+                                            <li>Express.js framework</li>
+                                            <li>RESTful API design</li>
+                                            <li>Database integration</li>
+                                            <li>Authentication and security</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-database"></i></div>
+                                    <div class="skill-name">Databases</div>
+                                    <div class="skill-level">Intermediate</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Database Management</h4>
+                                        <p>SQL and NoSQL database design and optimization.</p>
+                                        <ul>
+                                            <li>PostgreSQL and MySQL</li>
+                                            <li>MongoDB for NoSQL</li>
+                                            <li>Database design and modeling</li>
+                                            <li>Query optimization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-flask"></i></div>
+                                    <div class="skill-name">Flask</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Python Web Framework</h4>
+                                        <p>Lightweight web applications and microservices development.</p>
+                                        <ul>
+                                            <li>RESTful web services</li>
+                                            <li>Template rendering</li>
+                                            <li>Database integration</li>
+                                            <li>Deployment and scaling</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skills-flip-grid">
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-aws"></i></div>
+                                    <div class="skill-name">Amazon AWS</div>
+                                    <div class="skill-level">Intermediate</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Cloud Infrastructure</h4>
+                                        <p>Scalable cloud applications and infrastructure management.</p>
+                                        <ul>
+                                            <li>EC2 and Lambda functions</li>
+                                            <li>S3 storage and CloudFront</li>
+                                            <li>RDS database services</li>
+                                            <li>Auto-scaling and load balancing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-docker"></i></div>
+                                    <div class="skill-name">Docker</div>
+                                    <div class="skill-level">Intermediate</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Containerization</h4>
+                                        <p>Application containerization and deployment orchestration.</p>
+                                        <ul>
+                                            <li>Docker container creation</li>
+                                            <li>Multi-stage builds</li>
+                                            <li>Docker Compose</li>
+                                            <li>Production deployment</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-git-alt"></i></div>
+                                    <div class="skill-name">Git & GitHub</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Version Control</h4>
+                                        <p>Advanced Git workflows and collaborative development.</p>
+                                        <ul>
+                                            <li>Branch management strategies</li>
+                                            <li>Code review processes</li>
+                                            <li>CI/CD pipeline integration</li>
+                                            <li>Open source contributions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-linux"></i></div>
+                                    <div class="skill-name">Linux</div>
+                                    <div class="skill-level">Intermediate</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>System Administration</h4>
+                                        <p>Linux server management and command line proficiency.</p>
+                                        <ul>
+                                            <li>Command line operations</li>
+                                            <li>Shell scripting</li>
+                                            <li>System monitoring</li>
+                                            <li>Security configurations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3>Specialized Technologies</h3>
+                    <div class="skills-flip-grid">
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-cube"></i></div>
+                                    <div class="skill-name">AR/VR Development</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Immersive Technologies</h4>
+                                        <p>Meta certified AR/VR developer with Unity expertise.</p>
+                                        <ul>
+                                            <li>Unity 3D game development</li>
+                                            <li>ARCore and ARKit integration</li>
+                                            <li>Blender 3D modeling</li>
+                                            <li>Interactive experience design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fab fa-ethereum"></i></div>
+                                    <div class="skill-name">Web3 & DeFi</div>
+                                    <div class="skill-level">Advanced</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Decentralized Applications</h4>
+                                        <p>Blockchain development and DeFi protocol implementation.</p>
+                                        <ul>
+                                            <li>Smart contract development</li>
+                                            <li>MetaMask integration</li>
+                                            <li>DeFi protocol design</li>
+                                            <li>NFT marketplace development</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-users"></i></div>
+                                    <div class="skill-name">Team Leadership</div>
+                                    <div class="skill-level">Expert Level</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Management & Strategy</h4>
+                                        <p>Proven leadership experience managing 300+ team members.</p>
+                                        <ul>
+                                            <li>Agile project management</li>
+                                            <li>Cross-functional team leadership</li>
+                                            <li>Strategic planning and execution</li>
+                                            <li>Performance optimization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card skill-flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="skill-icon-large"><i class="fas fa-chart-pie"></i></div>
+                                    <div class="skill-name">Business Strategy</div>
+                                    <div class="skill-level">Expert Level</div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="skill-details">
+                                        <h4>Entrepreneurship</h4>
+                                        <p>Successful entrepreneur with ₹2+ crore revenue generation.</p>
+                                        <ul>
+                                            <li>Market analysis and research</li>
+                                            <li>Revenue optimization</li>
+                                            <li>Client relationship management</li>
+                                            <li>Growth strategy development</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">
+                    Progressive career growth from intern to CEO - building and scaling multiple successful ventures
+                </p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-card animate-on-scroll">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>CEO & Co-Founder</h3>
+                            <h4>Pi Pascal's Institute</h4>
+                            <p class="duration">Jun 2024 - Present (8+ months)</p>
+                        </div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li>Spearheaded B2B operations development driving consistent 30% month-over-month growth</li>
+                        <li>Led comprehensive platform development for ed-tech solutions with extensive R&D operations</li>
+                        <li>Managed strategic client outreach across western India, securing major partnerships</li>
+                        <li>Conducted detailed market research and competitor analysis to identify growth opportunities</li>
+                        <li>Implemented data-driven strategies to follow market trends and optimize business operations</li>
+                        <li>Built strategic partnerships with educational institutions and corporate clients</li>
+                    </ul>
+                    <div class="experience-technologies">
+                        <h5>Technologies & Skills:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Business Strategy</span>
+                            <span class="tech-tag">Ed-Tech</span>
+                            <span class="tech-tag">B2B Sales</span>
+                            <span class="tech-tag">Market Research</span>
+                            <span class="tech-tag">Team Leadership</span>
+                            <span class="tech-tag">Platform Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card animate-on-scroll">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>CEO & Founder</h3>
+                            <h4>Matchbox Labs</h4>
+                            <p class="duration">Mar 2022 - Present (2+ years)</p>
+                        </div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li>Built and scaled company to generate over INR 2 crore revenue through multi-brand operations</li>
+                        <li>Achieved remarkable 600% ROI for clients through strategic marketing campaigns</li>
+                        <li>Successfully led and managed 30+ direct team members and coordinated 300+ freelancers</li>
+                        <li>Handled complex operations across Indian and overseas markets for awareness campaigns</li>
+                        <li>Developed proprietary systems for client conversion and retention strategies</li>
+                        <li>Established strong vendor relationships and optimized operational workflows</li>
+                    </ul>
+                    <div class="experience-technologies">
+                        <h5>Technologies & Skills:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Business Development</span>
+                            <span class="tech-tag">Digital Marketing</span>
+                            <span class="tech-tag">Team Management</span>
+                            <span class="tech-tag">Data Analytics</span>
+                            <span class="tech-tag">Operations</span>
+                            <span class="tech-tag">Client Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card animate-on-scroll">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Coding Expert Tier 3</h3>
+                            <h4>Outlier AI</h4>
+                            <p class="duration">Jun 2024 - Present (8+ months)</p>
+                        </div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li>Fine-tuned Large Language Models (LLMs) for optimal code generation and responses</li>
+                        <li>Consistently achieved 100% accuracy across multiple complex coding projects</li>
+                        <li>Demonstrated exceptional performance resulting in pay rate increase from $16/hour to $52/hour</li>
+                        <li>Worked extensively across multiple programming languages and frameworks</li>
+                        <li>Contributed to improving AI model performance for coding-related tasks</li>
+                        <li>Mentored junior developers and provided code quality assurance</li>
+                    </ul>
+                    <div class="experience-technologies">
+                        <h5>Technologies & Skills:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">LLM Fine-tuning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Code Review</span>
+                            <span class="tech-tag">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card animate-on-scroll">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Market Trend & Campaign Analyst</h3>
+                            <h4>Inkeidea, Mumbai</h4>
+                            <p class="duration">Feb 2021 - Mar 2022 (1+ year)</p>
+                        </div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li>Analyzed comprehensive market trends and prepared detailed strategic reports for leadership</li>
+                        <li>Worked on diverse campaigns across multiple clients, gaining extensive domain knowledge</li>
+                        <li>Created compelling data visualizations for campaign insights and performance metrics</li>
+                        <li>Analyzed complex demographics, targeted audience segments, and key performance indicators</li>
+                        <li>Implemented data-driven insights to optimize marketing strategies and improve ROI</li>
+                        <li>Collaborated with cross-functional teams to deliver actionable business intelligence</li>
+                    </ul>
+                    <div class="experience-technologies">
+                        <h5>Technologies & Skills:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">Market Research</span>
+                            <span class="tech-tag">Campaign Analytics</span>
+                            <span class="tech-tag">Data Visualization</span>
+                            <span class="tech-tag">Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card animate-on-scroll">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>Influencer Manager & Brand Outreach Intern</h3>
+                            <h4>SparkUp Reach</h4>
+                            <p class="duration">Jun 2020 - Jan 2021 (8 months)</p>
+                        </div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li>Successfully managed 25+ influencers across various social media platforms</li>
+                        <li>Handled comprehensive brand outreach strategies and achieved successful client closures</li>
+                        <li>Executed innovative digital marketing and social media marketing campaigns</li>
+                        <li>Built foundational experience in digital marketing ecosystem and client relations</li>
+                        <li>Developed skills in content strategy, campaign management, and performance tracking</li>
+                        <li>Established professional network within the digital marketing industry</li>
+                    </ul>
+                    <div class="experience-technologies">
+                        <h5>Technologies & Skills:</h5>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Social Media Marketing</span>
+                            <span class="tech-tag">Influencer Management</span>
+                            <span class="tech-tag">Brand Outreach</span>
+                            <span class="tech-tag">Digital Marketing</span>
+                            <span class="tech-tag">Content Strategy</span>
+                            <span class="tech-tag">Client Relations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & Certifications</h2>
+                <p class="section-subtitle">
+                    Recognition, awards, and continuous learning milestones that showcase excellence and growth
+                </p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Star Performer</h3>
+                    <p class="achievement-org">Lovely Professional University</p>
+                    <p class="achievement-year">2025</p>
+                    <p>Outstanding achievement in Student Revenue Generation Program with exceptional performance and leadership.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Achievement Highlights:</h5>
+                        <ul>
+                            <li>Generated over 30 lakhs revenue through innovative projects</li>
+                            <li>Led cross-functional teams in revenue generation activities</li>
+                            <li>Demonstrated exceptional entrepreneurial skills</li>
+                            <li>Recognized among top performers university-wide</li>
+                            <li>Mentored junior students in business development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Youngest Tycoon Nominee</h3>
+                    <p class="achievement-org">TIE (The Indus Entrepreneurs), Bangalore</p>
+                    <p class="achievement-year">2024</p>
+                    <p>Prestigious nomination for outstanding entrepreneurial achievements and business innovation at a young age.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Recognition Details:</h5>
+                        <ul>
+                            <li>Nominated among India's top young entrepreneurs</li>
+                            <li>Recognition for innovative business solutions</li>
+                            <li>Leadership in scaling multiple ventures</li>
+                            <li>Contribution to startup ecosystem development</li>
+                            <li>Mentorship and guidance from industry leaders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Star Startup Alumni</h3>
+                    <p class="achievement-org">BSIET (B.S. Institute of Engineering & Technology)</p>
+                    <p class="achievement-year">2023</p>
+                    <p>Recognition for exceptional startup success and entrepreneurial excellence during diploma studies.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Achievement Highlights:</h5>
+                        <ul>
+                            <li>Outstanding academic and entrepreneurial performance</li>
+                            <li>Early-stage startup development and growth</li>
+                            <li>Innovation in technology and business solutions</li>
+                            <li>Alumni network leadership and contribution</li>
+                            <li>Inspiration for current students</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Machine Learning Specialization</h3>
+                    <p class="achievement-org">Stanford University (Coursera)</p>
+                    <p class="achievement-year">August 2023</p>
+                    <p>Comprehensive specialization in machine learning algorithms, implementation, and real-world applications.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Course Coverage:</h5>
+                        <ul>
+                            <li>Supervised Learning (Linear/Logistic Regression)</li>
+                            <li>Neural Networks and Deep Learning</li>
+                            <li>Unsupervised Learning and Recommender Systems</li>
+                            <li>Machine Learning System Design</li>
+                            <li>Practical implementation in Python/MATLAB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>AR/VR Developer Certification</h3>
+                    <p class="achievement-org">Meta (Facebook)</p>
+                    <p class="achievement-year">March 2024</p>
+                    <p>Professional certification in augmented and virtual reality development with hands-on project experience.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Certification Highlights:</h5>
+                        <ul>
+                            <li>Unity 3D development for AR/VR applications</li>
+                            <li>ARCore and ARKit implementation</li>
+                            <li>3D modeling and animation with Blender</li>
+                            <li>Interactive experience design principles</li>
+                            <li>Cross-platform deployment strategies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Coding Expert Tier 3</h3>
+                    <p class="achievement-org">Outlier AI</p>
+                    <p class="achievement-year">2024</p>
+                    <p>Advanced tier achievement with exceptional performance in LLM fine-tuning and code optimization.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Performance Metrics:</h5>
+                        <ul>
+                            <li>100% accuracy rate across all projects</li>
+                            <li>Pay rate increased from $16/hour to $52/hour</li>
+                            <li>Multi-language programming expertise</li>
+                            <li>Advanced LLM model optimization</li>
+                            <li>Mentoring and quality assurance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Revenue Generation Excellence</h3>
+                    <p class="achievement-org">Matchbox Labs</p>
+                    <p class="achievement-year">2022-2024</p>
+                    <p>Outstanding business performance with INR 2+ crore revenue generation and 600% ROI for clients.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Business Achievements:</h5>
+                        <ul>
+                            <li>₹2+ crore total revenue generation</li>
+                            <li>600% maximum ROI achieved for clients</li>
+                            <li>30+ direct team members managed</li>
+                            <li>300+ freelancers coordinated</li>
+                            <li>Multi-brand operations scaling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Growth Hacking Excellence</h3>
+                    <p class="achievement-org">Pi Pascal's Institute</p>
+                    <p class="achievement-year">2024</p>
+                    <p>Exceptional growth strategy implementation resulting in consistent 30% month-over-month growth.</p>
+                    
+                    <div class="achievement-details">
+                        <h5>Growth Metrics:</h5>
+                        <ul>
+                            <li>30% consistent monthly growth rate</li>
+                            <li>B2B operations development and optimization</li>
+                            <li>Strategic partnerships across western India</li>
+                            <li>Market research and competitive analysis</li>
+                            <li>Data-driven growth strategy implementation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Innovative solutions spanning AI/ML, blockchain, AR/VR, and data analytics with real-world impact
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Finance & Investment Expert LLM Chatbot</h3>
+                        <p class="project-description">
+                            Advanced AI-powered chatbot providing personalized financial planning and investment guidance using fine-tuned GPT-2 model, deployed on interactive Gradio interface for seamless user experience.
+                        </p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul class="project-features">
+                                <li>Real-time financial advice based on user queries</li>
+                                <li>Investment portfolio analysis and recommendations</li>
+                                <li>Risk assessment and mitigation strategies</li>
+                                <li>Market trend analysis and predictions</li>
+                                <li>Interactive web interface with chat history</li>
+                                <li>Multi-language support for global users</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Hugging Face</span>
+                            <span class="project-tag">GPT-2</span>
+                            <span class="project-tag">Gradio</span>
+                            <span class="project-tag">NLP</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">95%</div>
+                                <div class="metric-label">Accuracy</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">500+</div>
+                                <div class="metric-label">Users</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">24/7</div>
+                                <div class="metric-label">Available</div>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fab fa-ethereum"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Matchboxcoin NFT</h3>
+                        <p class="project-description">
+                            Revolutionary blockchain-based NFT asset developed in Solidity with smart contracts, deployed on Ethereum mainnet with MetaMask integration for secure and transparent transactions.
+                        </p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul class="project-features">
+                                <li>ERC-721 compliant NFT smart contracts</li>
+                                <li>Secure minting and trading mechanisms</li>
+                                <li>MetaMask wallet integration</li>
+                                <li>Ethereum mainnet deployment</li>
+                                <li>Royalty distribution system</li>
+                                <li>Decentralized marketplace compatibility</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Solidity</span>
+                            <span class="project-tag">Web3</span>
+                            <span class="project-tag">MetaMask</span>
+                            <span class="project-tag">Ethereum</span>
+                            <span class="project-tag">Smart Contracts</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">100+</div>
+                                <div class="metric-label">NFTs Minted</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">0.05</div>
+                                <div class="metric-label">ETH Floor</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">50+</div>
+                                <div class="metric-label">Holders</div>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View on Chain
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ROI Analysis Marketing Dashboard</h3>
+                        <p class="project-description">
+                            Comprehensive data visualization platform analyzing conversions and ROI across multiple demographics, providing strategic insights for optimizing future marketing campaigns and business decisions.
+                        </p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul class="project-features">
+                                <li>Real-time ROI tracking and analytics</li>
+                                <li>Multi-channel campaign performance analysis</li>
+                                <li>Interactive demographic segmentation</li>
+                                <li>Predictive modeling for future campaigns</li>
+                                <li>Automated reporting and alerts</li>
+                                <li>Integration with multiple data sources</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Tableau</span>
+                            <span class="project-tag">R</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Analytics</span>
+                            <span class="project-tag">Data Science</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">600%</div>
+                                <div class="metric-label">Max ROI</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">20+</div>
+                                <div class="metric-label">Campaigns</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">₹2Cr+</div>
+                                <div class="metric-label">Revenue</div>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Save the Planet AR Game</h3>
+                        <p class="project-description">
+                            Immersive augmented reality game featuring Earth protection mechanics with asteroids embedded in real-world environment, developed using cutting-edge AR technologies for engaging gameplay experience.
+                        </p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul class="project-features">
+                                <li>Real-world AR object placement and tracking</li>
+                                <li>Interactive 3D Earth and asteroid models</li>
+                                <li>Physics-based collision detection</li>
+                                <li>Progressive difficulty levels</li>
+                                <li>Environmental awareness messaging</li>
+                                <li>Cross-platform mobile compatibility</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Unity</span>
+                            <span class="project-tag">ARCore</span>
+                            <span class="project-tag">Blender</span>
+                            <span class="project-tag">OpenGL</span>
+                            <span class="project-tag">C#</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">1000+</div>
+                                <div class="metric-label">Downloads</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">4.5</div>
+                                <div class="metric-label">Rating</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">10+</div>
+                                <div class="metric-label">Levels</div>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-play"></i>
+                                Play Game
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coffee Bean Classifier</h3>
+                        <p class="project-description">
+                            Advanced machine learning project using supervised learning algorithms to classify coffee beans based on bake percentage, implemented in Jupyter Notebook with comprehensive data analysis.
+                        </p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul class="project-features">
+                                <li>Image processing and feature extraction</li>
+                                <li>Multiple ML algorithm comparison</li>
+                                <li>Data preprocessing and augmentation</li>
+                                <li>Real-time classification interface</li>
+                                <li>Performance metrics visualization</li>
+                                <li>Model optimization and tuning</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">Jupyter</span>
+                            <span class="project-tag">OpenCV</span>
+                            <span class="project-tag">ML</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">92%</div>
+                                <div class="metric-label">Accuracy</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">5000+</div>
+                                <div class="metric-label">Images</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">6</div>
+                                <div class="metric-label">Classes</div>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Notebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Pi Pascal's Institute Platform</h3>
+                        <p class="project-description">
+                            Comprehensive ed-tech platform with advanced B2B operations, driving consistent 30% monthly growth through innovative learning solutions and strategic partnerships with educational institutions.
+                        </p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul class="project-features">
+                                <li>Interactive learning management system</li>
+                                <li>B2B partnership portal and tools</li>
+                                <li>Advanced analytics and reporting</li>
+                                <li>Multi-institutional collaboration</li>
+                                <li>Custom curriculum development</li>
+                                <li>Real-time progress tracking</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">Ed-Tech</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                            <span class="project-tag">AWS</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-value">30%</div>
+                                <div class="metric-label">Growth/Month</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">500+</div>
+                                <div class="metric-label">Students</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">15+</div>
+                                <div class="metric-label">Partners</div>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Visit Platform
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education Journey</h2>
+                <p class="section-subtitle">
+                    Building strong academic foundation with excellent performance and continuous learning
+                </p>
+            </div>
+            
+            <div class="education-timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2026 (Present)</div>
+                        <h3>Bachelor of Technology</h3>
+                        <h4>Computer Science and Engineering</h4>
+                        <p class="grade">CGPA: 7.6 / 10.0</p>
+                        <h5>Lovely Professional University, Punjab</h5>
+                        <p>Pursuing comprehensive education in software engineering, data structures, algorithms, and emerging technologies.</p>
+                        
+                        <div class="timeline-details">
+                            <h5>Key Coursework:</h5>
+                            <ul>
+                                <li>Data Structures and Algorithms</li>
+                                <li>Machine Learning and Artificial Intelligence</li>
+                                <li>Database Management Systems</li>
+                                <li>Software Engineering Principles</li>
+                                <li>Computer Networks and Security</li>
+                                <li>Web Development Technologies</li>
+                                <li>Blockchain and Cryptocurrency</li>
+                                <li>Mobile Application Development</li>
+                            </ul>
+                            
+                            <h5>Academic Achievements:</h5>
+                            <ul>
+                                <li>Star Performer in Student Revenue Generation Program</li>
+                                <li>Generated over 30 lakhs revenue through projects</li>
+                                <li>Active participant in tech clubs and hackathons</li>
+                                <li>Consistent academic performance above 7.5 CGPA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2023</div>
+                        <h3>Diploma in Engineering</h3>
+                        <h4>Computer Science Engineering</h4>
+                        <p class="grade">Percentage: 79.60%</p>
+                        <h5>Maharashtra State Board of Technical Education (MSBTE)</h5>
+                        <p>Built strong foundation in programming, database management, and software development principles with excellent performance.</p>
+                        
+                        <div class="timeline-details">
+                            <h5>Core Subjects:</h5>
+                            <ul>
+                                <li>Programming in C, C++, and Java</li>
+                                <li>Database Management Systems</li>
+                                <li>Computer Graphics and Multimedia</li>
+                                <li>Operating Systems</li>
+                                <li>Computer Networks</li>
+                                <li>Software Engineering</li>
+                                <li>Web Technologies (HTML, CSS, JavaScript)</li>
+                                <li>Project Management</li>
+                            </ul>
+                            
+                            <h5>Academic Highlights:</h5>
+                            <ul>
+                                <li>Star Startup Alumni recognition</li>
+                                <li>Top 10% in final year examinations</li>
+                                <li>Led multiple technical projects</li>
+                                <li>Active in college technical events</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h3>Secondary School Certificate (SSC)</h3>
+                        <h4>10th Standard with Science</h4>
+                        <p class="grade">Percentage: 94.30%</p>
+                        <h5>Maharashtra State Board</h5>
+                        <p>Achieved outstanding academic excellence with strong foundation in mathematics, science, and analytical thinking.</p>
+                        
+                        <div class="timeline-details">
+                            <h5>Key Subjects:</h5>
+                            <ul>
+                                <li>Mathematics - 96%</li>
+                                <li>Science and Technology - 95%</li>
+                                <li>English - 92%</li>
+                                <li>Hindi - 94%</li>
+                                <li>Social Studies - 95%</li>
+                            </ul>
+                            
+                            <h5>Achievements:</h5>
+                            <ul>
+                                <li>School topper in Mathematics</li>
+                                <li>Science exhibition winner</li>
+                                <li>Active in coding competitions</li>
+                                <li>Leadership roles in student activities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Let's discuss your next project or opportunity
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form animate-on-scroll">
+                    <form action="/contact" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>koushalvichare7@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 8767217069</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Mumbai, Maharashtra</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/koushalvichare</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/koushalvichare7" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/koushalvichare" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:koushalvichare7@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+918767217069" class="social-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            
+            <p>&copy; 2025 Koushal Vichare. All rights reserved.</p>
+            <p>Made with ❤️ using modern web technologies</p>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript Files -->
+    <script src="{{ url_for('static', filename='js/enhanced-modern-portfolio.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/advanced-animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/interactive-effects.js') }}"></script>
+</body>
+</html>
